@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+:root {
+    --black: black;
+    --white: white;
+    --gray: gray;
+    --orange: orange;
+    --pink: #ad166e;
+    --space-1: 10px;
+    --space-2: 20px;
+    --space-3: 30px;
+    --space-4: 40px;
+    --space-5: 50px;
+    --space-6: 60px;
+    --space-7: 70px;
+    --space-8: 80px;
+    --space-9: 90px;
+    --space-10: 100px;
+    --b1: 1px;
+    --b2: 2px;
+    --b3: 3px;
+    --fs-1: calc(2.5vw + 1.2rem);
+    --fs-2: calc(2vw + 1rem);
+    --fs-3: calc(1.5vw + 1rem);
+}
+
+:focus-visible {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.title h1 {
+    font-size: var(--fs-3);
+    border-left: 3px solid var(--pink);
+    padding-left: var(--space-1);
+}
+
+.title p {
+    font-style: italic;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* =====================================================================   */
+.main-layout {
+    display: flex;
+}
+
+/* ==================================================================== */
+.main-layout .sidebar {
+    width: 25%;
+    position: fixed;
+    padding: var(--space-9) var(--space-4);
+    background: linear-gradient(to top, var(--orange), var(--pink));
+    overflow-x: hidden;
+    scrollbar-width: none;
+    height: 105vh;
+}
+
+.main-layout .sidebar .input-field {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.main-layout .sidebar .input-field form {
+    display: flex;
+}
+
+.main-layout .sidebar .input-field form input {
+    height: 40px;
+    width: 100%;
+    border-radius: 40px 0 0 40px;
+    border: none;
+    padding: 4px var(--space-1);
+    font-size: 16px;
+}
+
+.main-layout .sidebar .input-field form button {
+    border-radius: 0 40px 40px 0;
+    width: 30px;
+    border: none;
+    background-color: var(--white);
+}
+
+.main-layout .sidebar .input-field .theme i {
+    font-size: 24px;
+    vertical-align: middle;
+    color: var(--white);
+}
+
+.main-layout .sidebar .logo {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.main-layout .sidebar .logo h1 {
+    /* font-size: var(--fs-1); */
+    font-size: 30px;
+}
+
+.main-layout .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-1) 0;
+}
+
+.main-layout .sidebar ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.225);
+    padding-bottom: var(--space-2);
+}
+
+.main-layout .sidebar a {
+    color: var(--white);
+}
+
+.main-layout .sidebar .contact {
+    padding: var(--space-1) 0;
+}
+
+.main-layout .sidebar .contact .time {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: var(--white);
+    padding: var(--space-1) 0;
+}
+
+.main-layout .sidebar .contact .time i {
+    font-size: 23px;
+}
+
+.main-layout .sidebar .social {
+    padding-top: var(--space-5);
+    display: flex;
+    justify-content: center;
+    gap: var(--space-1);
+}
+
+.main-layout .sidebar .social .icon {
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    color: var(--white);
+}
+
+/* ==================================================================== */
+/* .main-layout .main-page {
+    width: 75%;
+    margin-left: 25%;
+} */
+
+.main-page .homepage {
+    background: url(https://images.pexels.com/photos/705255/pexels-photo-705255.jpeg) no-repeat center / cover;
+    /* padding: 320px 0 30px 30px; */
+}
+
+.main-page .homepage .homecontent {
+    background-color: var(--white);
+    /* width: 550px; */
+    padding: var(--space-3);
+}
+
+.main-page .homepage .homecontent h1 {
+    font-size: var(--fs-3);
+}
+
+.main-page .homepage .homecontent button {
+    padding: var(--space-1) var(--space-3);
+    background-color: var(--pink);
+    border-radius: 40px;
+    font-size: 15px;
+    color: var(--white);
+    border: none;
+    margin-top: var(--space-2);
+}
+
+.main-page .homepage .homecontent button:hover {
+    background-color: var(--orange);
+}
+
+.main-page .homepage .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--space-2) var(--space-4);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-page .homepage .navbar .logo {
+    font-size: calc(1.5vw + 1rem);
+}
+
+.main-page .homepage .navbar .logo a {
+    color: var(--white);
+}
+
+.main-page .homepage .navbar .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    color: var(--white);
+}
+
+.main-page .homepage .navbar .icons button {
+    height: 40px;
+    width: 40px;
+    background: linear-gradient(var(--orange), var(--pink));
+    border: none;
+    border-radius: 4px;
+    color: var(--white)
+}
+
+/* =============================  */
+.services .serviceBox {
+    padding: var(--space-5) var(--space-3);
+}
+
+.services .serviceBox .ImageBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+}
+
+.services .serviceBox .box {
+    position: relative;
+    overflow: hidden;
+}
+
+.services .serviceBox .overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.5s ease;
+    display: grid;
+    place-content: end start;
+    padding: 20px;
+    color: white;
+}
+
+.services .serviceBox .overlay h1 {
+    text-shadow: 0 0 5px var(--black);
+    transform: translateY(30px);
+    transition: 0.5s ease;
+}
+
+.services .serviceBox .overlay button {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: var(--space-1);
+    border: none;
+    border-radius: 10px;
+    transform: translateY(60px);
+    transition: 0.5s ease;
+}
+
+.services .serviceBox .box:hover .overlay {
+    background-color: unset;
+}
+
+.services .serviceBox .box:hover h1 {
+    transform: translateY(0);
+}
+
+.services .serviceBox .box:hover button {
+    transform: translateY(0);
+}
+
+/* ======================== */
+.clientsec {
+    background: url(https://thumbs.dreamstime.com/b/vase-fall-flowers-wooden-table-cozy-home-adding-warmth-color-to-rooms-decor-touch-autumn-beauty-floral-326661857.jpg) no-repeat center/cover;
+    background-attachment: fixed;
+}
+
+.clientsec .client-space {
+    padding: var(--space-5) var(--space-3);
+}
+
+.clientsec .ClientBox {
+    margin-top: var(--space-4);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.clientsec .ClientBox .box {
+    background-color: var(--white);
+    padding: var(--space-3);
+    /* width: 30%; */
+}
+
+/* .clientsec .ClientBox .box q::before {
+    font-size: 50px;
+    color: var(--orange);
+} */
+.clientsec .ClientBox .box p {
+    text-align: justify;
+}
+
+.clientsec .ClientBox .box i {
+    font-size: 30px;
+    transform: translateY(-6px);
+    color: orange;
+}
+
+.clientsec .ClientBox .clientimage {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: var(--space-2) 0;
+}
+
+.clientsec .ClientBox .clientimage img {
+    border-radius: 50%;
+}
+
+.header {
+    background-color: var(--orange);
+    position: fixed;
+    width: 100%;
+    z-index: 111;
+    overflow: auto;
+    scrollbar-width: thin;
+    /* scroll-behavior: smooth; */
+    /* scrollbar-gutter: stable; */
+    /* scrollbar-color: rgb(177, 119, 10) var(--orange); */
+}
+
+.header::-webkit-scrollbar {
+    width: 20px;
+}
+
+.header::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+.header::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 10px;
+}
+
+.header::-webkit-scrollbar-thumb:hover {
+    background: rgb(2, 7, 26);
+}
+
+.header ul {
+    padding: var(--space-2) 0;
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    /* gap: 20px; */
+}
+
+.header ul li {
+    padding: 10px;
+}
+
+.header ul a {
+    color: var(--black);
+}
